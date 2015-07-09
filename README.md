@@ -10,4 +10,4 @@ This app show to use redis to; count how many users are on-line(active) in a
 period of 30 seconds ; show top 5 of users with more logins ; and how to process
 background jobs.
 
-
+run test `bundle exec rspec` and try to implement have some fun.

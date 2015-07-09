@@ -2,8 +2,8 @@ class HomeController < ApplicationController
   def index
     metrics = Metrics.new
     fn_user = ->(name){ User.find(name) }
-    @top5   = metrics.top_five_login.map(&fn_user).reject {|e| e.blank? }
-    @online = metrics.users_online.map(&fn_user).reject {|e| e.blank? }
+    @top5   = (metrics.top_five_login || []).map(&fn_user).reject {|e| e.blank? }
+    @online = (metrics.users_online || []).map(&fn_user).reject {|e| e.blank? }
 
     respond_to do |format|
       format.html
