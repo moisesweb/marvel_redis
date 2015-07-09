@@ -1,0 +1,24 @@
+<h1>Redis in Action</h1>
+<div class="row small-1">
+<%= form_tag('/home/login', remote: true) do %>
+  <div class="collapse">
+      <%= button_tag :login, class: 'button postfix'  %>
+      <%= text_field_tag :name  %>
+  </div>
+<% end %>
+</div>
+<br/>
+<p>Marvel Users Only</p>
+<hr></hr>
+<h5>Top 5</h5>
+<div id="top">
+  <%= render 'top5', top5: @top5 %>
+</div>
+<div id="fight">
+</div>
+<hr></hr>
+<h5>Online active users within last one minute</h5>
+<div id="online">
+  <%= render 'online', online: @online %>
+</div>
+

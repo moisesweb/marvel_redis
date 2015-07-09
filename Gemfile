@@ -21,6 +21,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'redis'
+gem 'sidekiq'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -31,6 +32,7 @@ gem 'redis'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'rspec-redis_helper', group: :test
+gem 'rspec-sidekiq', group: :test
 group :development, :test do
 gem 'timecop'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

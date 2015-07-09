@@ -1,0 +1,6 @@
+<% online.each do |u| %>
+  <%= link_to u.image, class: 'th' do %>
+    <h6><%= u.name %></h6>
+    <%= image_tag(u.image, size: '60') %>
+  <% end %>
+<% end %>

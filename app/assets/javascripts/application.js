@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function () {
+  function refreshPartial() {
+    $.ajax({
+      url: "/", format: 'js', dataType: "script", contentType: "text/javascript"
+    });
+  }
+
+  setInterval(refreshPartial, 1000)
+
+});
