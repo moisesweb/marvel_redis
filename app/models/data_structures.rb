@@ -2,7 +2,7 @@ class DataStructures
   attr_reader :provider
 
   def initialize
-    @provider = "# what provider?"
+    @provider = Redis.new
   end
 
   def self.get
